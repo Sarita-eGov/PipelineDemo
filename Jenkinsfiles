@@ -10,7 +10,7 @@ node {
 
         } finally {
             publishHTML (target: [
-                    reportDir: 'target/site/serenity',
+                    reportDir: 'e2e-automation-pipeline-master/target/site/serenity',
                     reportFiles: 'index.html',
                     reportName: "Smoke tests report"
             ])
@@ -23,7 +23,7 @@ node {
 
         } finally {
             publishHTML (target: [
-                  reportDir: 'target/site/serenity',
+                  reportDir: 'e2e-automation-pipeline-master/target/site/serenity',
                   reportFiles: 'index.html',
                   reportName: "API tests report"
             ])
@@ -36,13 +36,13 @@ node {
 
         } finally {
             publishHTML (target: [
-                    reportDir: 'target/site/serenity',
+                    reportDir: 'e2e-automation-pipeline-master/target/site/serenity',
                     reportFiles: 'index.html',
                     reportName: "UI tests report"
             ])
         }
     }
     stage('Results') {
-        junit '**/target/failsafe-reports/*.xml'
+        junit '**/e2e-automation-pipeline-master/target/failsafe-reports/*.xml'
     }
 }
