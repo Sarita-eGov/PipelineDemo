@@ -23,9 +23,9 @@ node {
 
         } finally {
             publishHTML (target: [
-                    reportDir: 'target/site/serenity',
-                    reportFiles: 'index.html',
-                    reportName: "API tests report"
+                  reportDir: 'target/site/serenity',
+                  reportFiles: 'index.html',
+                  reportName: "API tests report"
             ])
         }
     }
