@@ -43,6 +43,6 @@ node {
         }
     }
     stage('Results') {
-        junit '**/e2e-automation-pipeline-master/target/failsafe-reports/*.xml'
+        junit '**/target/failsafe-reports/*.xml'
     }
 }
